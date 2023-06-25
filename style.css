@@ -1,0 +1,444 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(40, 40, 40, 1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.another-margin {
+    margin-top: 16px !important;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-top: 88px;
+    color: #959AB0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 113%;
+    margin-bottom: 8px;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.code_input {
+    width: 56px;
+    height: 56px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 16px;
+    caret-color: transparent;
+}
+
+.code_input::placeholder {
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+}
+
+.enter-btn {
+    width: 416px;
+    box-sizing: border-box;
+    padding: 16px;
+    gap: 10px;
+    border-radius: 16px;
+    background: #90FFA2;
+    box-shadow: 0px 6px 0px 0px #FFF;
+    margin-top: 32px;
+    cursor: pointer;
+    color: #282828;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 28px;
+}
+
+.admin_question {
+    margin-top: 64px;
+    color: #959AB0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.admin_question span {
+    color: rgba(144, 255, 162, 1);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mobile-title {
+    display: none;
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 40px;
+}
+
+.enter-name-description {
+    color: #959AB0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-top: 16px;
+}
+
+.input-with-image {
+    margin-top: 80px;
+    position: relative;
+}
+
+.name-input {
+    width: 492px;
+    height: 56px;
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: #282828;
+    box-sizing: border-box;
+    padding-left: 52px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 28px;
+    caret-color: transparent;
+}
+
+.name-input::placeholder {
+    color: #FFF;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.input-with-image img {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.start-btn {
+    width: 492px;
+    margin-top: 16px;
+}
+
+.any-problems-footer {
+    color: #959AB0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-top: 36px;
+}
+
+.menu {
+    box-sizing: border-box;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 135px;
+    background: #282828;
+    box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.30), 0px 1px 5px 0px rgba(0, 0, 0, 0.30);
+}
+
+.menu-block {
+    display: flex;
+    align-items: center;
+}
+
+.porfolio-block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo img {
+    width: 126px;
+    height: 29px;
+    margin-right: 48px;
+}
+
+.menu-item {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.menu-item span {
+    color: rgba(144, 255, 162, 1);
+    margin-right: 36px;
+}
+
+.menu-btn {
+    width: 135px;
+    height: 36px;
+    box-sizing: border-box;
+    padding: 4px 16px;
+    border-radius: 6px;
+    background: #83E493;
+    color: #18191F;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.portfolio-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-name {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.admin-stage {
+    color: #959AB0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.admin-pic img {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 44px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 2px 0px 0px #FFF;
+}
+
+.quiz-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    box-sizing: border-box;
+    padding: 0 135px;
+}
+
+.quiz-menu-title {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.quiz-menu-inputs {
+    display: flex;
+    gap: 21px;
+}
+
+.quiz-input-with-image  {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.quiz-input {
+    width: 265px;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #424242;
+    box-shadow: 0px 4px 0px 0px #18191F;
+    color: #FFF;
+    font-size: 16px;
+    caret-color: transparent;
+}
+
+.quiz::placeholder {
+    color: rgba(255, 255, 255, 0.36);
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.quiz-input-with-image img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#quizes-container {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 30px;
+    padding: 0 140px 0 135px;
+}
+
+.quiz-card {
+    margin-top: 24px;
+}
+
+.quiz-card-pic-1 img {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.quiz-card-pic-2 img {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 52px;
+    cursor: pointer;
+}
+
+.quiz-card-title {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 16px;
+}
+
+.quiz-card-description {
+    color: #959AB0;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.quiz-card-btns {
+    display: flex;
+    gap: 16px;
+}
+
+.quiz-card-edit-btn {
+    width: 193px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    gap: 10px;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.48);
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 28px;
+}
+
+.quiz-card-start-btn {
+    width: 149px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    gap: 10px;
+    border-radius: 6px;
+    border: 2px solid #FFF;
+    background: #FFF;
+    margin-top: 18px;
+    color: #18191F;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 28px;
+}
+
+.admin-page-create-quiz-btn {
+    width: 282px;
+    height: 60px;
+    position: fixed;
+    bottom: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding: 16px 64px;
+    border-radius: 16px;
+    background: #90FFA2;
+    box-shadow: 0px 6px 0px 0px #FFF;
+    color: #282828;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+
+    .title {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .enter-btn {
+        width: 280px;
+        padding: 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .inputs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+    }
+
+    .enter-name-description {
+        display: none;
+    }
+
+    .quolly-pic {
+        display: none;
+    }
+
+    .mobile-title {
+        display: block;
+    }
+
+    .input-with-image {
+        margin-top: 104px;
+    }
+
+    .name-input {
+        width: 327px;
+    }
+
+    .start-btn {
+        width: 327px;
+    }
+
+    .any-problems-footer {
+        width: 327px;
+        text-align: center;
+    }
+}
