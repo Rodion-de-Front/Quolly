@@ -53,7 +53,7 @@
                     <input type="text" class="name-input" placeholder="Введи своё имя">
                     <img src="img/enter_name.png">
                   </div>
-                <div class="enter-btn start-btn" onclick="renderEnterNameForm()">
+                <div class="enter-btn start-btn" onclick="renderGame()">
                     Поехали!
                 </div>
             </div>
@@ -90,7 +90,7 @@
                 <div class="logo">
                     <img src="img/QUOLLY.png"/>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="renderAdminPage()">
                     <span>Мои квизы</span>
                 </div>
                 <div class="menu-item">
@@ -98,10 +98,10 @@
                 </div>
             </div>
             <div class="porfolio-block">
-                <div class="menu-btn">
+                <div class="menu-btn" onclick="createQuiz()">
                     Создать квиз
                 </div>
-                <div class="portfolio-info">
+                <div class="portfolio-info" onclick="renderPortfolio()">
                     <div class="portfolio-info-text">
                         <div class="admin-name">
                             Брегман Илья
@@ -111,249 +111,484 @@
                         </div>
                     </div>
                     <div class="admin-pic">
-                        <img src=""/>
+                        <img src="img/profile-ava.png"/>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="quizes">
-            <div class="quiz-menu">
-                <div class="quiz-menu-title">
-                    Мои квизы
-                </div>
-                <div class="quiz-menu-inputs">
-                    <div class="quiz-input-with-image">
-                        <input type="text" class="quiz-input" placeholder="Поиск">
-                        <img src="img/loop.png">
+        <div class="admin-content">
+            <div class="quizes">
+                <div class="quiz-menu">
+                    <div class="quiz-menu-title">
+                        Мои квизы
                     </div>
-                    <div class="quiz-input-with-image">
-                        <input type="text" class="quiz-input" placeholder="По дате создания">
-                        <img src="img/more.png">
+                    <div class="quiz-menu-inputs">
+                        <div class="quiz-input-with-image">
+                            <input type="text" class="quiz-input" placeholder="Поиск">
+                            <img src="img/loop.png">
+                        </div>
+                        <div class="quiz-input-with-image">
+                            <input type="text" class="quiz-input" placeholder="По дате создания">
+                            <img src="img/more.png">
+                        </div>
+                    </div>
+                </div>
+                <div id="quizes-container">
+                    <div class="quiz-card">
+                        <div class="quiz-card-pic-1">
+                            <img src="img/cart.png"/>
+                        </div>
+                        <div class="quiz-card-pic-2">
+                            <img src="img/star.png"/>
+                        </div>
+                        <div class="quiz-card-main-pic">
+                            <img src="img/card.png"/>
+                        </div>
+                        <div class="quiz-card-title">
+                            Квиз по английскому
+                        </div>
+                        <div class="quiz-card-description">
+                            24 дня назад · 46 вопросов
+                        </div>
+                        <div class="quiz-card-btns">
+                            <div class="quiz-card-edit-btn">
+                                <img src="img/pen.png"/>
+                                <div>
+                                    Редактировать
+                                </div>
+                            </div>
+                            <div class="quiz-card-start-btn">
+                                <img src="img/play.png"/>
+                                <div>
+                                    Запустить
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <div class="quiz-card-pic-1">
+                            <img src="img/cart.png"/>
+                        </div>
+                        <div class="quiz-card-pic-2">
+                            <img src="img/star.png"/>
+                        </div>
+                        <div class="quiz-card-main-pic">
+                            <img src="img/card.png"/>
+                        </div>
+                        <div class="quiz-card-title">
+                            Квиз по английскому
+                        </div>
+                        <div class="quiz-card-description">
+                            24 дня назад · 46 вопросов
+                        </div>
+                        <div class="quiz-card-btns">
+                            <div class="quiz-card-edit-btn">
+                                <img src="img/pen.png"/>
+                                <div>
+                                    Редактировать
+                                </div>
+                            </div>
+                            <div class="quiz-card-start-btn">
+                                <img src="img/play.png"/>
+                                <div>
+                                    Запустить
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <div class="quiz-card-pic-1">
+                            <img src="img/cart.png"/>
+                        </div>
+                        <div class="quiz-card-pic-2">
+                            <img src="img/star.png"/>
+                        </div>
+                        <div class="quiz-card-main-pic">
+                            <img src="img/card.png"/>
+                        </div>
+                        <div class="quiz-card-title">
+                            Квиз по английскому
+                        </div>
+                        <div class="quiz-card-description">
+                            24 дня назад · 46 вопросов
+                        </div>
+                        <div class="quiz-card-btns">
+                            <div class="quiz-card-edit-btn">
+                                <img src="img/pen.png"/>
+                                <div>
+                                    Редактировать
+                                </div>
+                            </div>
+                            <div class="quiz-card-start-btn">
+                                <img src="img/play.png"/>
+                                <div>
+                                    Запустить
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <div class="quiz-card-pic-1">
+                            <img src="img/cart.png"/>
+                        </div>
+                        <div class="quiz-card-pic-2">
+                            <img src="img/star.png"/>
+                        </div>
+                        <div class="quiz-card-main-pic">
+                            <img src="img/card.png"/>
+                        </div>
+                        <div class="quiz-card-title">
+                            Квиз по английскому
+                        </div>
+                        <div class="quiz-card-description">
+                            24 дня назад · 46 вопросов
+                        </div>
+                        <div class="quiz-card-btns">
+                            <div class="quiz-card-edit-btn">
+                                <img src="img/pen.png"/>
+                                <div>
+                                    Редактировать
+                                </div>
+                            </div>
+                            <div class="quiz-card-start-btn">
+                                <img src="img/play.png"/>
+                                <div>
+                                    Запустить
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <div class="quiz-card-pic-1">
+                            <img src="img/cart.png"/>
+                        </div>
+                        <div class="quiz-card-pic-2">
+                            <img src="img/star.png"/>
+                        </div>
+                        <div class="quiz-card-main-pic">
+                            <img src="img/card.png"/>
+                        </div>
+                        <div class="quiz-card-title">
+                            Квиз по английскому
+                        </div>
+                        <div class="quiz-card-description">
+                            24 дня назад · 46 вопросов
+                        </div>
+                        <div class="quiz-card-btns">
+                            <div class="quiz-card-edit-btn">
+                                <img src="img/pen.png"/>
+                                <div>
+                                    Редактировать
+                                </div>
+                            </div>
+                            <div class="quiz-card-start-btn">
+                                <img src="img/play.png"/>
+                                <div>
+                                    Запустить
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <div class="quiz-card-pic-1">
+                            <img src="img/cart.png"/>
+                        </div>
+                        <div class="quiz-card-pic-2">
+                            <img src="img/star.png"/>
+                        </div>
+                        <div class="quiz-card-main-pic">
+                            <img src="img/card.png"/>
+                        </div>
+                        <div class="quiz-card-title">
+                            Квиз по английскому
+                        </div>
+                        <div class="quiz-card-description">
+                            24 дня назад · 46 вопросов
+                        </div>
+                        <div class="quiz-card-btns">
+                            <div class="quiz-card-edit-btn">
+                                <img src="img/pen.png"/>
+                                <div>
+                                    Редактировать
+                                </div>
+                            </div>
+                            <div class="quiz-card-start-btn">
+                                <img src="img/play.png"/>
+                                <div>
+                                    Запустить
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <div class="quiz-card-pic-1">
+                            <img src="img/cart.png"/>
+                        </div>
+                        <div class="quiz-card-pic-2">
+                            <img src="img/star.png"/>
+                        </div>
+                        <div class="quiz-card-main-pic">
+                            <img src="img/card.png"/>
+                        </div>
+                        <div class="quiz-card-title">
+                            Квиз по английскому
+                        </div>
+                        <div class="quiz-card-description">
+                            24 дня назад · 46 вопросов
+                        </div>
+                        <div class="quiz-card-btns">
+                            <div class="quiz-card-edit-btn">
+                                <img src="img/pen.png"/>
+                                <div>
+                                    Редактировать
+                                </div>
+                            </div>
+                            <div class="quiz-card-start-btn">
+                                <img src="img/play.png"/>
+                                <div>
+                                    Запустить
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin-page-create-quiz-btn">
+                        Создать квиз
                     </div>
                 </div>
             </div>
-            <div id="quizes-container">
-                <div class="quiz-card">
-                    <div class="quiz-card-pic-1">
-                        <img src="img/cart.png"/>
+    </div>
+    </template>
+
+    <template id="tmpl_admin_portfolio">
+        <div class="start">
+            <div class="portfolio-block">
+                <div>
+                <div class="portfolio-pic">
+                    <img src="img/profile-ava.png" />
+                    <div class="overlay-image">
+                      <img src="img/profile-pen.png" />
                     </div>
-                    <div class="quiz-card-pic-2">
-                        <img src="img/star.png"/>
+                  </div>
+                </div>
+                <input type="text" placeholder="ФИО"/>
+                <input type="text" placeholder="Почта"/>
+                <input type="text" placeholder="Пароль"/>
+                <input type="text" placeholder="Организация"/>
+                <div class="confirm-changes-btn">
+                    Сохранить изменения
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="tmpl_game">
+        <div class="start">
+            <div class="game-card">
+                <div class="game-question-number">
+                    Вопрос ${question-number}
+                </div>
+                <div class="game-title">
+                    ${title}
+                </div>
+                <div id="timer">
+                    00 : 20
+                </div>
+                <div class="game-btns">
+                    <div class="game-btn color-1">
+                        ${option}
                     </div>
-                    <div class="quiz-card-main-pic">
-                        <img src="img/card.png"/>
+                    <div class="game-btn color-2">
+                        ${option}
                     </div>
-                    <div class="quiz-card-title">
-                        Квиз по английскому
+                    <div class="game-btn color-3">
+                        ${option}
                     </div>
-                    <div class="quiz-card-description">
-                        24 дня назад · 46 вопросов
-                    </div>
-                    <div class="quiz-card-btns">
-                        <div class="quiz-card-edit-btn">
-                            <img src="img/pen.png"/>
-                            <div>
-                                Редактировать
-                            </div>
-                        </div>
-                        <div class="quiz-card-start-btn">
-                            <img src="img/play.png"/>
-                            <div>
-                                Запустить
-                            </div>
-                        </div>
+                    <div class="game-btn color-4">
+                        ${option}
                     </div>
                 </div>
-                <div class="quiz-card">
-                    <div class="quiz-card-pic-1">
-                        <img src="img/cart.png"/>
-                    </div>
-                    <div class="quiz-card-pic-2">
-                        <img src="img/star.png"/>
-                    </div>
-                    <div class="quiz-card-main-pic">
-                        <img src="img/card.png"/>
-                    </div>
-                    <div class="quiz-card-title">
-                        Квиз по английскому
-                    </div>
-                    <div class="quiz-card-description">
-                        24 дня назад · 46 вопросов
-                    </div>
-                    <div class="quiz-card-btns">
-                        <div class="quiz-card-edit-btn">
-                            <img src="img/pen.png"/>
-                            <div>
-                                Редактировать
-                            </div>
-                        </div>
-                        <div class="quiz-card-start-btn">
-                            <img src="img/play.png"/>
-                            <div>
-                                Запустить
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="tmpl_leader_board">
+        <div class="start">
+            <div class="game-card">
+                <div class="game-question-number">
+                   Пройдено ${question-number}/${all-questions}
                 </div>
-                <div class="quiz-card">
-                    <div class="quiz-card-pic-1">
-                        <img src="img/cart.png"/>
-                    </div>
-                    <div class="quiz-card-pic-2">
-                        <img src="img/star.png"/>
-                    </div>
-                    <div class="quiz-card-main-pic">
-                        <img src="img/card.png"/>
-                    </div>
-                    <div class="quiz-card-title">
-                        Квиз по английскому
-                    </div>
-                    <div class="quiz-card-description">
-                        24 дня назад · 46 вопросов
-                    </div>
-                    <div class="quiz-card-btns">
-                        <div class="quiz-card-edit-btn">
-                            <img src="img/pen.png"/>
-                            <div>
-                                Редактировать
-                            </div>
-                        </div>
-                        <div class="quiz-card-start-btn">
-                            <img src="img/play.png"/>
-                            <div>
-                                Запустить
-                            </div>
-                        </div>
-                    </div>
+                <div class="game-title">
+                    Лидерборд
                 </div>
-                <div class="quiz-card">
-                    <div class="quiz-card-pic-1">
-                        <img src="img/cart.png"/>
-                    </div>
-                    <div class="quiz-card-pic-2">
-                        <img src="img/star.png"/>
-                    </div>
-                    <div class="quiz-card-main-pic">
-                        <img src="img/card.png"/>
-                    </div>
-                    <div class="quiz-card-title">
-                        Квиз по английскому
-                    </div>
-                    <div class="quiz-card-description">
-                        24 дня назад · 46 вопросов
-                    </div>
-                    <div class="quiz-card-btns">
-                        <div class="quiz-card-edit-btn">
-                            <img src="img/pen.png"/>
-                            <div>
-                                Редактировать
-                            </div>
+                <div class="users-stage">
+                    <div class="user-card">
+                        <div class="user-place">
+                            #1
                         </div>
-                        <div class="quiz-card-start-btn">
-                            <img src="img/play.png"/>
-                            <div>
-                                Запустить
-                            </div>
+                        <div class="user-name">
+                            Bill Rizer
                         </div>
-                    </div>
-                </div>
-                <div class="quiz-card">
-                    <div class="quiz-card-pic-1">
-                        <img src="img/cart.png"/>
-                    </div>
-                    <div class="quiz-card-pic-2">
-                        <img src="img/star.png"/>
-                    </div>
-                    <div class="quiz-card-main-pic">
-                        <img src="img/card.png"/>
-                    </div>
-                    <div class="quiz-card-title">
-                        Квиз по английскому
-                    </div>
-                    <div class="quiz-card-description">
-                        24 дня назад · 46 вопросов
-                    </div>
-                    <div class="quiz-card-btns">
-                        <div class="quiz-card-edit-btn">
-                            <img src="img/pen.png"/>
-                            <div>
-                                Редактировать
-                            </div>
-                        </div>
-                        <div class="quiz-card-start-btn">
-                            <img src="img/play.png"/>
-                            <div>
-                                Запустить
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz-card">
-                    <div class="quiz-card-pic-1">
-                        <img src="img/cart.png"/>
-                    </div>
-                    <div class="quiz-card-pic-2">
-                        <img src="img/star.png"/>
-                    </div>
-                    <div class="quiz-card-main-pic">
-                        <img src="img/card.png"/>
-                    </div>
-                    <div class="quiz-card-title">
-                        Квиз по английскому
-                    </div>
-                    <div class="quiz-card-description">
-                        24 дня назад · 46 вопросов
-                    </div>
-                    <div class="quiz-card-btns">
-                        <div class="quiz-card-edit-btn">
-                            <img src="img/pen.png"/>
-                            <div>
-                                Редактировать
-                            </div>
-                        </div>
-                        <div class="quiz-card-start-btn">
-                            <img src="img/play.png"/>
-                            <div>
-                                Запустить
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz-card">
-                    <div class="quiz-card-pic-1">
-                        <img src="img/cart.png"/>
-                    </div>
-                    <div class="quiz-card-pic-2">
-                        <img src="img/star.png"/>
-                    </div>
-                    <div class="quiz-card-main-pic">
-                        <img src="img/card.png"/>
-                    </div>
-                    <div class="quiz-card-title">
-                        Квиз по английскому
-                    </div>
-                    <div class="quiz-card-description">
-                        24 дня назад · 46 вопросов
-                    </div>
-                    <div class="quiz-card-btns">
-                        <div class="quiz-card-edit-btn">
-                            <img src="img/pen.png"/>
-                            <div>
-                                Редактировать
-                            </div>
-                        </div>
-                        <div class="quiz-card-start-btn">
-                            <img src="img/play.png"/>
-                            <div>
-                                Запустить
-                            </div>
+                        <div class="user-points">
+                            5,84
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="admin-page-create-quiz-btn">
-            Создать квиз
+    </template>
+
+    <template id="tmpl_create_quiz">
+        <div class="create-quize-blocks">
+            <div class="quiz-list quiz-line">
+                <div id="quiz-templates">
+                    <div id="question1" class="question" onclick="showQuestionSettings(1)">
+                        <div id="qustion-title1" class="question-title">
+                            Введите вопрос
+                        </div>
+                        <div class="question-pic">
+                            <img src="img/question.png" onclick="showQuestionSettings('1')"/>
+                        </div>
+                        <div class="question-btns">
+                            <img src="img/copy.png" onclick="copyQuestion(1)"/>
+                            <img src="img/delete.png" onclick="deleteQuestion(1)"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz-btns">
+                    <div class="create-quiz-btn" onclick="addQuestion()">
+                        Добавить
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-creator">
+                <input id="quiz-creator-input1" class="quiz-creator-input" type="text" placeholder="Введите вопрос" onkeyup="editQuestionText(1)"/>
+                <div class="media-block">
+                    <div class="media-title">
+                        <img src="img/media.png"/>
+                        <div class="media-title-text">
+                            Вставить медиа
+                        </div>
+                    </div>
+                </div>
+                <div id="button-container">
+                    <div class="add-button-btn" onclick="addButton()">
+                        <img src="img/plus-circle.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-settings quiz-line">
+                <div class="quiz-setting">
+                    <div class="quiz-setting-item">
+                        <div class="quiz-setting-block">
+                            <img src="img/quiz-type.png"/>
+                            <div class="quiz-setting-text">
+                                Тип квеста
+                            </div>
+                        </div>
+                        <div class="opening-list">
+                            <div class="opening-list-title">
+                                Вопрос
+                            </div>
+                            <img src="img/more.png"/>
+                        </div>
+                    </div>
+                    <div class="quiz-setting-item">
+                        <div class="quiz-setting-block">
+                            <img src="img/answer-type.png"/>
+                            <div class="quiz-setting-text">
+                                Тип ответа
+                            </div>
+                        </div>
+                        <div class="opening-list">
+                            <div class="opening-list-title">
+                                Мульти
+                            </div>
+                            <img src="img/more.png"/>
+                        </div>
+                    </div>
+                    <div class="quiz-setting-item">
+                        <div class="quiz-setting-block">
+                            <img src="img/time-limit.png"/>
+                            <div class="quiz-setting-text">
+                                Временный лимит
+                            </div>
+                        </div>
+                        <div class="opening-list">
+                            <div class="opening-list-title">
+                                30 секунд
+                            </div>
+                            <img src="img/more.png"/>
+                        </div>
+                    </div>
+                    <div class="quiz-setting-item">
+                        <div class="quiz-setting-block">
+                            <img src="img/points-number.png"/>
+                            <div class="quiz-setting-text">
+                                Кол-во очков
+                            </div>
+                        </div>
+                        <div class="opening-list">
+                            <div class="opening-list-title">
+                                1 очко
+                            </div>
+                            <img src="img/more.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz-btns">
+                    <div class="cancel-quiz-btn" onclick="createQuiz()">
+                        Сбросить
+                    </div>
+                    <div class="create-quiz-btn">
+                        Создать
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="tmpl_button">
+        <div id="button${number}" class="created-button color-${number}">
+            <input class="button-input" type="text" placeholder="Введите ответ">
+            <img src="img/close-delete.png" onclick="deleteButton('${number}')"/>
+        </div>
+    </template>
+
+    <template id="tmpl_add_button">
+        <div class="add-button-btn" onclick="addButton()">
+            <img src="img/plus-circle.png"/>
+        </div>
+    </template>
+
+    <template id="tmpl_render_question">
+        <div id="question${id}" class="question" onclick="showQuestionSettings('${id}')">
+            <div id="qustion-title${id}" class="question-title">
+                Введите вопрос
+            </div>
+            <div class="question-pic">
+                <img src="img/question.png" onclick="showQuestionSettings('${id}')"/>
+            </div>
+            <div class="question-btns">
+                <img src="img/copy.png" onclick="copyQuestion('${id}')"/>
+                <img src="img/delete.png" onclick="deleteQuestion('${id}')"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="tmpl_new_media_block">
+        <input id="quiz-creator-input${id}" class="quiz-creator-input" type="text" placeholder="Введите вопрос" onkeyup="editQuestionText('${id}')"/>
+        <div class="media-block">
+            <div class="media-title">
+                <img src="img/media.png"/>
+                <div class="media-title-text">
+                    Вставить медиа
+                </div>
+            </div>
+        </div>
+        <div id="button-container">
+            <div class="add-button-btn" onclick="addButton()">
+                <img src="img/plus-circle.png"/>
+            </div>
         </div>
     </template>
 
